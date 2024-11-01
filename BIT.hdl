@@ -1,0 +1,9 @@
+CHIP BIT {
+	IN in, load;
+	OUT out;
+
+	PARTS:
+	MULTI(a=outDFF, b=in, sel=load, out=outMulti);
+	DFF(in=outMulti, out=outDFF, out=out);
+
+}
